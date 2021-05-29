@@ -1,0 +1,11 @@
+/* generic */
+@import './generic/reset';
+
+/* settings */
+@import "settings/index";
+
+/* elements */
+@import './elements/base';
+@import './elements/coin-details';
+@import './elements/coins-list';
+@import './elements/header';

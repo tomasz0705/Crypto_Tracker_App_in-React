@@ -1,0 +1,41 @@
+.coin__details {
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+
+    .details {
+
+        &__content {
+
+        }
+
+        &__row {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            height: 80px;
+            border-bottom: 1px solid #d7d7d7;
+            width: 700px;
+
+            img {
+                height: 50px;
+                width: 50px;
+                margin-right: 10px;
+            }
+        }
+
+        &__header {
+            margin-right: 10px;
+        }
+
+        &__symbol {
+            text-transform: uppercase;
+            margin-right: 20px;
+        }
+
+        &__details__currprice {
+            margin-right: 20px;
+        }
+    }
+}
