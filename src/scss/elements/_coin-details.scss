@@ -1,41 +1,85 @@
-.coin__details {
-    display: flex;
-    justify-content: center;
-    padding-top: 60px;
+.details {
+    &__container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 60px;
+    }
 
-    .details {
+    &__row {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        font-size: 26px;
+        border-bottom: 1px solid #d7d7d7;
 
-        &__content {
-
-        }
-
-        &__row {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-            height: 80px;
-            border-bottom: 1px solid #d7d7d7;
-            width: 700px;
-
-            img {
-                height: 50px;
-                width: 50px;
-                margin-right: 10px;
-            }
-        }
-
-        &__header {
+        img {
+            height: 50px;
+            width: 50px;
             margin-right: 10px;
         }
+    }
 
-        &__symbol {
-            text-transform: uppercase;
-            margin-right: 20px;
+    &__header {
+        margin-right: 10px;
+    }
+
+    &__symbol {
+        text-transform: uppercase;
+        margin-right: 50px;
+    }
+
+    &__currprice {
+        margin-right: 10px;
+    }
+
+    &__percentage24--danger, .fa-sort-down {
+        font-size: 16px;
+        font-weight: 900;
+        color: red;
+    }
+
+    &__percentage24--success, .fa-sort-up {
+        font-size: 16px;
+        font-weight: 900;
+        color: green;
+    }
+
+    &__table {
+        padding-top: 30px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        thead tr {
+            th {
+                font-size: 24px;
+                padding-bottom: 15px;
+            }
+
+            span {
+                color: $highlited-color;
+            }
+
         }
 
-        &__details__currprice {
-            margin-right: 20px;
+        tbody tr td {
+            width: 300px;
+            padding: 7px 5px;
+        }
+
+        tbody > tr > td span {
+            text-transform: uppercase;
+        }
+
+        .table__athchangepercent--danger {
+            color: red;
+        }
+
+        .table__athchangepercent--success {
+            color: green;
         }
     }
 }

@@ -8,8 +8,8 @@ function CoinDetails() {
     const [coinInfo, setCoinInfo] = useState([]);
 
     useEffect(() => {
-        console.log("ds");
         fetch(`${API_URL}/coins/${id}`, {
+            method: "GET",
             headers: {
                 "Content-Type": "application/json",
             }

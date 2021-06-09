@@ -5,7 +5,9 @@
 @import "settings/index";
 
 /* elements */
+@import './elements/header';
 @import './elements/base';
 @import './elements/coin-details';
 @import './elements/coins-list';
-@import './elements/header';
+@import './elements/footer';
+@import './elements/notfound';

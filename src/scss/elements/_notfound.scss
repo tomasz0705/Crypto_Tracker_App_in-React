@@ -1,0 +1,10 @@
+.notfound {
+    height: calc(100vh - #{$header-height});
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 24px;
+    }
+}
