@@ -12,8 +12,6 @@ function Transactions() {
         setForm((prevForm) => ({ ...prevForm, [name]: value }));
     }
 
-
-
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(form); //skasowac potem

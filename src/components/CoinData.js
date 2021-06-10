@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 
 function CoinData({ data }) {
     return (
@@ -56,7 +57,8 @@ function CoinData({ data }) {
                                     {data?.market_data?.ath_change_percentage?.usd.toFixed(1)}%
                                 </span>
                                 <br/>
-                                <span style={{fontSize: "12px"}}>{data?.market_data?.ath_date?.usd}</span>
+                                <span style={{fontSize: "11px"}}>{moment(data?.market_data?.ath_date?.usd).utc().format('MMM DD, YYYY')} </span>
+                                <span style={{fontSize: "11px", textTransform: "lowercase"}}>({moment(data?.market_data?.ath_date?.usd).fromNow()})</span>
                             </td>
                         </tr>
                         <tr>
@@ -66,7 +68,8 @@ function CoinData({ data }) {
                                     {data?.market_data?.atl_change_percentage?.usd.toFixed(1)}%
                                 </span>
                                 <br/>
-                                <span style={{fontSize: "12px"}}>{data?.market_data?.atl_date?.usd}</span>
+                                <span style={{fontSize: "11px"}}>{moment(data?.market_data?.atl_date?.usd).utc().format('MMM DD, YYYY')} </span>
+                                <span style={{fontSize: "11px", textTransform: "lowercase"}}>({moment(data?.market_data?.atl_date?.usd).fromNow()})</span>
                             </td>
                         </tr>
                     </tbody>
