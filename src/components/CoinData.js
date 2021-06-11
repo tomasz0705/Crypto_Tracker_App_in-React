@@ -18,40 +18,40 @@ function CoinData({ data }) {
                 <table className="table">
                     <thead>
                         <tr>
-                            <th colSpan={2}><span>{data.name} </span>Price and Market Stats</th>
+                            <th colSpan={2}><span>{data?.name} </span>Price and Market Stats</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Kurs <span>{data?.symbol}</span></td>
+                            <td><span>{data?.symbol}</span> Price</td>
                             <td>{data?.market_data?.current_price?.usd.toLocaleString()} USD</td>
                         </tr>
                         <tr>
-                            <td>Kapitalizacja rynkowa</td>
+                            <td>Market Cap</td>
                             <td>{data?.market_data?.market_cap?.usd.toLocaleString()} USD</td>
                         </tr>
                         <tr>
-                            <td>Wolumen obrotu</td>
+                            <td>24 Hour Trading Vol</td>
                             <td>{data?.market_data?.total_volume?.usd.toLocaleString()} USD</td>
                         </tr>
                         <tr>
-                            <td>24 godz. – min. / 24 godz. – maks.</td>
+                            <td>24h Low / 24h High</td>
                             <td>{data?.market_data?.low_24h?.usd.toLocaleString()} USD / {data?.market_data?.high_24h?.usd.toLocaleString()} USD</td>
                         </tr>
                         <tr>
-                            <td>Ocena wg. kapitalizacji rynku</td>
+                            <td>Market Cap Rank</td>
                             <td>#{data?.market_cap_rank}</td>
                         </tr>
                         <tr>
-                            <td>Wycena w pełni rozwodniona</td>
+                            <td>Fully Diluted Valuation</td>
                             <td>{data?.market_data?.fully_diluted_valuation?.usd ? data?.market_data?.fully_diluted_valuation?.usd.toLocaleString() + " USD" : "Brak danych"}</td>
                         </tr>
                         <tr>
-                            <td>Maksymalne zasoby</td>
+                            <td>Max Supply</td>
                             <td>{data?.market_data?.max_supply ? data?.market_data?.max_supply.toLocaleString() : "Brak danych"}</td>
                         </tr>
                         <tr>
-                            <td>Maksimum historyczne</td>
+                            <td>All-Time High</td>
                             <td>{data?.market_data?.ath?.usd ? data?.market_data?.ath?.usd.toLocaleString() + " USD" : "Brak danych"}
                                 <span style={{marginLeft: "10px"}} className={data?.market_data?.ath_change_percentage?.usd < 0 ? "table__athchangepercent--danger" : "table__athchangepercent--success"}>
                                     {data?.market_data?.ath_change_percentage?.usd.toFixed(1)}%
@@ -62,7 +62,7 @@ function CoinData({ data }) {
                             </td>
                         </tr>
                         <tr>
-                            <td>Minimum historyczne</td>
+                            <td>All-Time Low</td>
                             <td>{data?.market_data?.atl?.usd ? data?.market_data?.atl?.usd.toLocaleString() + " USD" : "Brak danych"}
                                 <span style={{marginLeft: "10px"}} className={data?.market_data?.atl_change_percentage?.usd < 0 ? "table__athchangepercent--danger" : "table__athchangepercent--success"}>
                                     {data?.market_data?.atl_change_percentage?.usd.toFixed(1)}%
