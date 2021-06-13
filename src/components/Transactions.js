@@ -23,14 +23,6 @@ function Transactions() {
         });
     }, []);
 
-/*     const sumRow = () => {
-        let getTotal = 0;
-        let currencyValue = 34000; //przykładowa wartość crypto waluty;
-        const valueEl = document.querySelector(".total-value-row");
-        getTotal = currencyValue * Number(form.number); // liczenie sumy
-        valueEl.innerText = "$" + getTotal;
-    } */
-
     const handleChange = (event) => {
         const { name, value } = event.target;
         setForm((prevForm) => ({ ...prevForm, [name]: value }));
@@ -38,7 +30,13 @@ function Transactions() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(form); //skasowac potem
+
+        const transactionValue = coins.find(coin => {
+            return coin.name === form.crypto
+        }).current_price * form.number;
+
+        console.log("transactionValue", transactionValue);
+        console.log(form, coins);
         const transactionsRow = document.querySelector(".transactions__list");
         const newTransaction = document.createElement("tr");
         transactionsRow.appendChild(newTransaction);
@@ -47,9 +45,8 @@ function Transactions() {
             <td>${form.crypto}</td>
             <td>${form.buysell}</td>
             <td>${form.number}</td>
-            <td className="total-value-row"></td>
+            <td className="total-value-row">$${transactionValue}</td>
         `;
-        // sumRow();
     }
 
     const handleClearRows = (event) => {
@@ -57,6 +54,14 @@ function Transactions() {
         const tableRowsInList = document.querySelectorAll(".transactions__row");
         tableRowsInList.forEach((tr) => tr.remove());
     }
+
+    // var transaction = {
+    //     cryptocurrency: form.crypto,
+    //     boughtsold: form.buysell,
+    //     cryptocount: form.number
+    // }
+
+    // localStorage.setItem("transaction", JSON.stringify(transaction));
 
     return (
         <div className="transactions container">
@@ -101,7 +106,11 @@ function Transactions() {
                             <th>Value:</th>
                         </tr>
                     </thead>
-                    <tbody className="transactions__list"></tbody>
+                    <tbody className="transactions__list">
+                        {/* {transactions.map((transaction) => {
+                            <Transaction data={transaction}></Transaction>
+                        })} */}
+                    </tbody>
                 </table>
             </div>
         </div>
