@@ -4,8 +4,7 @@ App allows searching for cryptocurrencies on home page and also saving user's cr
 
 I'd like to add more functionalities and develop this project more in the future like add localStorage to Transaction Component and make my project Responsive Web Design.
 
-Used technologies: HTML5, CSS3, Sass, ReactJS, momentjs
-
+Used technologies: HTML5, CSS3/Sass, ReactJS, REST API, momentjs
 
 # Getting Started with Create React App
 
