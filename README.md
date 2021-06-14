@@ -1,3 +1,10 @@
+## ABOUT CRYPTO TRACKER APP - exam project
+Project was created for users who want to be up to date with crypto currency market stats (crypto current price, market capitalization, price change in percentage / 24h).
+App allows search for cryptocurrencies on home page and also save user crypto transactions that he has made.
+
+Used technologies: HTML5, CSS3, Sass, ReactJS, momentjs
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

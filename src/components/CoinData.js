@@ -13,6 +13,7 @@ function CoinData({ data }) {
                     {data?.market_data?.price_change_percentage_24h < 0 ? <i className="fas fa-sort-down"></i> : <i className="fas fa-sort-up"></i>}
                     {data?.market_data?.price_change_percentage_24h.toFixed(2)}%
                 </span>
+                <span style={{fontSize: 16, color: "#e2e2e2"}}> / 24h</span>
             </div>
             <div className="details__table">
                 <table className="table">
