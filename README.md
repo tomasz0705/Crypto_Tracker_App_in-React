@@ -1,6 +1,7 @@
 # ABOUT CRYPTO TRACKER APP - exam project
 
 [View project online on github-pages](https://tomasz0705.github.io/Crypto_Tracker_App_in-React/).
+
 Project was created for users who want to be up to date with crypto currency market stats (crypto current price, market capitalization, price change in percentage / 24h).
 App allows searching for cryptocurrencies on home page and also saving user's crypto transactions that he has made.
 
