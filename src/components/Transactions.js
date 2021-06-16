@@ -45,7 +45,7 @@ function Transactions() {
             <td>${form.crypto}</td>
             <td>${form.buysell}</td>
             <td>${form.number}</td>
-            <td className="total-value-row">$${transactionValue}</td>
+            <td className="total-value-row">$${transactionValue.toFixed(2)}</td>
         `;
     }
 

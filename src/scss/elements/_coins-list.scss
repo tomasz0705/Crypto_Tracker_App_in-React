@@ -1,172 +1,165 @@
-.coin__app {
+.coin {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 65px;
     padding-bottom: 180px;
     color: #fff;
-}
 
-.coin__search {
-    margin-bottom: 64px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-}
-
-.coin__labels {
-    width: 450px;
-    display: flex;
-    font-size: 20px;
-    margin-bottom: 20px;
-
-    &--label:first-of-type {
-        margin-right: 210px;
+    &__search {
+        margin-bottom: 64px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
     }
-}
 
-.coin__text {
-    margin-bottom: 32px;
-    text-align: center;
-}
+    &__labels {
+        width: 450px;
+        display: flex;
+        font-size: 20px;
+        margin-bottom: 20px;
 
-.coin__input {
-    padding-left: 16px;
-    width: 300px;
-    height: 50px;
-    border-radius: 4px;
-    border: none;
-    background-image: linear-gradient(
-      -225deg,
-      #ac32e4 0%,
-      #7918f2 48%,
-      #4801ff 100%
-    );
-    font-family: 'Montserrat', sans-serif;
-    color: #e2e2e2;
-}
-
-.coin__input::placeholder {
-    color: #e2e2e2;
-}
-
-.coin__container {
-    display: flex;
-    justify-content: center;
-}
-
-.coin__row {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    height: 80px;
-    border-bottom: 1px solid #d7d7d7;
-    width: 450px;
-}
-
-.coin {
-    display: flex;
-    align-items: center;
-    min-width: 300px;
-}
-
-.coin a, .tooltip {
-    font-size: 16px;
-    width: 220px;
-    margin-right: 40px;
-    color: #fff;
-
-    position: relative;
-    display: inline-block;
-
-    &:hover {
-        text-decoration: underline;
+        &--label:first-of-type {
+            margin-right: 210px;
+        }
     }
-}
 
-/* Tooltip text */
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 180px;
-    background-image: linear-gradient(
-      -225deg,
-      #ac32e4 0%,
-      #7918f2 48%,
-      #4801ff 100%
-    );
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
+    &__text {
+        margin-bottom: 32px;
+        text-align: center;
+    }
 
-    /* Position the tooltip text */
-    position: absolute;
-    z-index: 1;
-    top: -5px;
-    left: 190%;
+    &__input {
+        padding-left: 16px;
+        width: 300px;
+        height: 50px;
+        border-radius: 4px;
+        border: none;
+        background-image: linear-gradient(
+          -225deg,
+          #ac32e4 0%,
+          #7918f2 48%,
+          #4801ff 100%
+        );
+        font-family: 'Montserrat', sans-serif;
+        color: #e2e2e2;
 
-    /* Fade in tooltip */
-    opacity: 0;
-    transition: opacity .3s;
-}
+        &::placeholder {
+            color: #e2e2e2;
+        }
+    }
 
-/* Tooltip arrow */
-.tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 100%;
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent #ac32e4 transparent transparent;
-}
+    &__content {
+        display: flex;
+        justify-content: center;
+    }
 
-/* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-}
+    &__row {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        height: 80px;
+        border-bottom: 1px solid #d7d7d7;
+        width: 450px;
+    }
 
-.coin img {
-    height: 30px;
-    width: 30px;
-    margin-right: 10px;
-}
+    &__single {
+        display: flex;
+        align-items: center;
+        min-width: 300px;
+    }
 
-.coin__symbol {
-    text-transform: uppercase;
-}
+    &__link, .tooltip {
+        font-size: 16px;
+        width: 220px;
+        margin-right: 40px;
+        color: #fff;
 
-.coin__data {
-    display: flex;
-    text-align: right;
-    justify-content: space-between;
-    width: 100%;
-}
+        position: relative;
+        display: inline-block;
 
-.coin__price {
-    width: 110px;
-}
+        &:hover {
+            text-decoration: underline;
 
-.coin__volume {
-    width: 155px;
-}
+            /* Show the tooltip text when you mouse over the tooltip container */
+            .tooltiptext {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
 
-.coin__marketcap {
-    width: 230px;
-}
+        /* Tooltip text */
+        .tooltiptext {
+            visibility: hidden;
+            width: 180px;
+            background-image: linear-gradient(
+            -225deg,
+            #ac32e4 0%,
+            #7918f2 48%,
+            #4801ff 100%
+            );
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
 
-.coin__percent {
-    width: 100px;
-}
+            /* Position the tooltip text */
+            position: absolute;
+            z-index: 1;
+            top: -5px;
+            left: 190%;
 
-.red {
-    color: #f00606;
-}
+            /* Fade in tooltip */
+            opacity: 0;
+            transition: opacity .3s;
 
-.green {
-    color: #11d811;
+            /* Tooltip arrow */
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                right: 100%;
+                margin-top: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: transparent #ac32e4 transparent transparent;
+            }
+        }
+    }
+
+    &__image {
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+    }
+
+    &__symbol {
+        text-transform: uppercase;
+    }
+
+    &__data {
+        display: flex;
+        text-align: right;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__price {
+        width: 110px;
+    }
+
+    &__volume {
+        width: 155px;
+    }
+
+    &__marketcap {
+        width: 230px;
+    }
+
+    &__percent {
+        width: 100px;
+    }
 }
