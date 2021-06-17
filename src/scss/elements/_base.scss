@@ -10,7 +10,6 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     background-color: #1c1c1d;
     color: #fff;
-    height: 100%;
 }
 
 a {
@@ -20,9 +19,4 @@ a {
 .container {
     width: 1000px;
     margin: 0 auto;
-}
-
-.app {
-    min-height: 100%;
-	position: relative;
 }

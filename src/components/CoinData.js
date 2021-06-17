@@ -2,6 +2,7 @@ import React from 'react';
 import moment from 'moment';
 
 function CoinData({ data }) {
+    console.log(data);
     return (
         <div className="details__container container">
             <div className="details__row">
@@ -75,6 +76,10 @@ function CoinData({ data }) {
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div className="details__description">
+                <h2 className="description__title">What is {data?.name}?</h2>
+                <div className="description__text" dangerouslySetInnerHTML={{__html: data?.description?.en}}></div>
             </div>
         </div>
     );
