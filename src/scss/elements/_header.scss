@@ -2,12 +2,14 @@
     height: $header-height;
     background-color: #1a1a1c;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    padding: 0 10%;
 
     &__container {
         height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
     }
 
     &__logo {

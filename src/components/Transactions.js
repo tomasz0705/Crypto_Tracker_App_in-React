@@ -64,54 +64,55 @@ function Transactions() {
     // localStorage.setItem("transaction", JSON.stringify(transaction));
 
     return (
-        <div className="transactions container">
-            <form className="transactions__form">
-                <div>
-                    <label>
-                        Choose a crypto currency:
-                    </label>
-                    <select className="form__select" name="crypto" id="currency-select" value={form.crypto} onChange={handleChange}>
-                        <option value="-">--Please choose an option--</option>
-                        {coins.map((coin) => {
-                            return <option key={coin.id} value={coin.name}>{coin.name}</option>
-                        })}
-                    </select>
+        <div className="transactions">
+            <div className="transactions__container container">
+                <form className="transactions__form">
+                    <div>
+                        <label>
+                            Choose a crypto currency:
+                        </label>
+                        <select className="form__select" name="crypto" id="currency-select" value={form.crypto} onChange={handleChange}>
+                            <option value="-">--Please choose an option--</option>
+                            {coins.map((coin) => {
+                                return <option key={coin.id} value={coin.name}>{coin.name}</option>
+                            })}
+                        </select>
+                    </div>
+                    <div>
+                        <label>Buy / sell:</label>
+                        <select className="form__select" name="buysell" id="buysell-select" value={form.buysell} onChange={handleChange}>
+                            <option value="-">--Please choose an option--</option>
+                            <option value="Bought">Bought</option>
+                            <option value="Sold">Sold</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Count of crypto currency:</label>
+                        <input className="form__input"name="number" type="number" placeholder="Enter a number" min={0} step={0.01} value={form.number} onChange={handleChange}></input>
+                    </div>
+                    <div className="transactions__buttons">
+                        <button className="btn btn__submit" type="submit" onClick={handleSubmit}>Submit</button>
+                        <button className="btn btn__clear" onClick={handleClearRows}>Clear All</button>
+                    </div>
+                </form>
+                <div className="transactions__history">
+                    <h1>History of cryptocurrency transactions</h1>
+                    <table className="transactions__table">
+                        <thead>
+                            <tr>
+                                <th>Crypto Currency:</th>
+                                <th>Bought/Sold:</th>
+                                <th>Count of crypto currency:</th>
+                                <th>Value:</th>
+                            </tr>
+                        </thead>
+                        <tbody className="transactions__list">
+                            {/* {transactions.map((transaction) => {
+                                <Transaction data={transaction}></Transaction>
+                            })} */}
+                        </tbody>
+                    </table>
                 </div>
-                <div>
-                    <label>Buy / sell:</label>
-                    <select className="form__select" name="buysell" id="buysell-select" value={form.buysell} onChange={handleChange}>
-                        <option value="-">--Please choose an option--</option>
-                        <option value="Bought">Bought</option>
-                        <option value="Sold">Sold</option>
-                    </select>
-                </div>
-                <div>
-                    <label>Count of crypto currency:</label>
-                    <input className="form__input"name="number" type="number" placeholder="Enter a number" min={0} step={0.01} value={form.number} onChange={handleChange}></input>
-                </div>
-                <div className="transactions__buttons">
-                    <button className="btn btn__submit" type="submit" onClick={handleSubmit}>Submit</button>
-                    <button className="btn btn__clear" onClick={handleClearRows}>Clear All</button>
-                </div>
-
-            </form>
-            <div style={{paddingTop: "50px"}} className="transactions__history">
-                <h1>History of cryptocurrency transactions</h1>
-                <table className="transactions__table">
-                    <thead>
-                        <tr>
-                            <th>Crypto Currency:</th>
-                            <th>Bought/Sold:</th>
-                            <th>Count of crypto currency:</th>
-                            <th>Value:</th>
-                        </tr>
-                    </thead>
-                    <tbody className="transactions__list">
-                        {/* {transactions.map((transaction) => {
-                            <Transaction data={transaction}></Transaction>
-                        })} */}
-                    </tbody>
-                </table>
             </div>
         </div>
     );

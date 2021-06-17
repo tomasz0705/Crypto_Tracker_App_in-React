@@ -29,7 +29,7 @@ function CoinsList() {
     );
 
     return (
-        <div className=" coin coin__list">
+        <div className=" coin container">
             <div className="coin__search">
                 <h1 className="coin__text">Search a currency</h1>
                 <form>

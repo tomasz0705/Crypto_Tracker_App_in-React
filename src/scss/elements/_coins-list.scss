@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     padding-top: 65px;
-    padding-bottom: 180px;
+    margin-bottom: 180px;
     color: #fff;
 
     &__search {
@@ -12,12 +12,13 @@
         flex-direction: column;
         justify-content: center;
         align-content: center;
+        font-size: 1rem;
     }
 
     &__labels {
         width: 450px;
         display: flex;
-        font-size: 20px;
+        font-size: 1.3rem;
         margin-bottom: 20px;
 
         &--label:first-of-type {

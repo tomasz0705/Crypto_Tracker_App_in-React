@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Footer() {
     return (
-        <footer className="footer">
+        <div className="footer">
             <div className="footer__container container">
                 <Link to="/" className="footer__logo">CryptoTrackerApp</Link>
                 <div className="footer__copyright">Copyright &#169; Tomasz Stolarczyk. All Rights Reserved.</div>
@@ -11,7 +11,7 @@ function Footer() {
                     Search for cryptocurrencies that interest you. Database is provided by CoinGecko.
                 </p> */}
             </div>
-        </footer>
+        </div>
     );
 }
 
